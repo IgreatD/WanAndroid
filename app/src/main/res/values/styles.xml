@@ -1,0 +1,136 @@
+<resources>
+
+    <style name="AppTheme" parent="QMUI.Compat.NoActionBar">
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:colorAccent">@color/colorPrimary</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">false</item>
+        <item name="android:windowAllowReturnTransitionOverlap">false</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:listDivider">@drawable/divider_bg</item>
+        <item name="android:textColorPrimary">@color/qmui_config_color_75_pure_black</item>
+
+    </style>
+
+    <style name="AppBarOverlay" parent="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="@android:style/ThemeOverlay.Material.Light">
+        <item name="android:textColorPrimary">@color/qmui_config_color_75_pure_black</item>
+        <item name="android:textColorSecondary">@color/qmui_config_color_75_pure_black</item>
+    </style>
+
+    <style name="AppTheme.Translucent.Login">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:colorPrimary">@color/designer_news</item>
+        <item name="android:colorAccent">@color/designer_news</item>
+        <item name="android:statusBarColor">@color/designer_news_super_dark</item>
+        <item name="android:navigationBarColor">@color/designer_news_super_dark</item>
+        <item name="android:colorButtonNormal">@color/designer_news_button</item>
+        <item name="android:colorControlActivated">@color/designer_news</item>
+        <item name="android:colorControlNormal">@color/qmui_config_color_50_pure_black</item>
+    </style>
+
+    <style name="AppTheme.Translucent.About">
+        <item name="android:windowEnterTransition">@transition/about_enter</item>
+        <item name="android:windowReturnTransition">@transition/about_return</item>
+    </style>
+
+    <style name="AppTheme.Translucent">
+        <item name="android:windowBackground">@color/scrim</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="Widget.Plaid" parent="android:Widget" />
+
+    <style name="Widget.Plaid.DialogTitle">
+        <item name="android:textAppearance">@style/TextAppearance.DialogTitle</item>
+    </style>
+
+    <style name="TextAppearance.DialogTitle" parent="@android:style/TextAppearance.Material.Title">
+        <item name="android:textColor">@color/text_primary_dark</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="TextAppearance.FloatLabelHint" parent="@android:style/TextAppearance.Material.Caption">
+        <item name="android:textColor">?android:colorAccent</item>
+    </style>
+
+    <style name="Widget.Plaid.HintCheckBox" parent="@android:style/Widget.Material.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/text_secondary_dark</item>
+    </style>
+
+    <style name="TextAppearance.DarkButton" parent="@android:style/TextAppearance.Material.Widget.Button">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.Translucent.Collection">
+        <item name="android:windowEnterTransition">@transition/about_enter</item>
+        <item name="android:windowReturnTransition">@transition/about_return</item>
+    </style>
+
+    <!-- search view theme -->
+
+    <style name="AppTheme.Translucent.Search">
+        <item name="android:windowAnimationStyle">@style/SearchWindowAnimations</item>
+        <item name="android:statusBarColor">@color/background_super_dark</item>
+        <item name="android:navigationBarColor">@color/background_super_dark</item>
+        <item name="android:windowEnterTransition">@transition/search_enter</item>
+        <item name="android:windowReturnTransition">@transition/search_return</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/search_shared_enter
+        </item>
+        <item name="android:windowSharedElementReturnTransition">@transition/search_shared_return
+        </item>
+        <item name="android:windowSharedElementsUseOverlay">true</item>
+    </style>
+
+    <style name="AppThemeDarkOverlay" parent="@android:style/ThemeOverlay.Material.Dark.ActionBar" />
+
+    <style name="SearchViewTheme" parent="AppThemeDarkOverlay">
+        <item name="colorControlActivated">@color/qmui_config_color_white</item>
+        <item name="android:searchViewStyle">@style/Widget.Plaid.SearchView</item>
+    </style>
+
+    <style name="SearchWindowAnimations">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@anim/fade_out_rapidly</item>
+    </style>
+
+    <!-- search view theme -->
+
+    <style name="Widget.Plaid.EmptyText">
+        <item name="android:textAppearance">@style/TextAppearance.DialogContent</item>
+        <item name="lineHeightHint">24sp</item>
+        <item name="android:textColor">@color/qmui_config_color_white</item>
+    </style>
+
+    <style name="TextAppearance.DialogContent" parent="@android:style/TextAppearance.Material.Subhead">
+        <item name="android:textColor">@color/text_secondary_dark</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="ListItemSecondary" parent="QMUITextAppearance.ListItem">
+        <item name="android:textColor">@color/text_secondary_dark</item>
+        <item name="android:textSize">@dimen/list_item_secondary</item>
+    </style>
+
+    <style name="ListItemPrimary" parent="QMUITextAppearance.ListItem">
+        <item name="android:textColor">@color/text_primary_dark</item>
+        <item name="android:textSize">@dimen/list_item_primary</item>
+    </style>
+
+    <style name="ListItemTertiary" parent="QMUITextAppearance.ListItem">
+        <item name="android:textColor">@color/text_tertiary_dark</item>
+        <item name="android:textSize">@dimen/list_item_tertiary</item>
+    </style>
+
+</resources>

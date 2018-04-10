@@ -1,0 +1,94 @@
+ext {
+
+    android = [
+            compileSdkVersion: 27,
+            buildToolsVersion: "27.0.3",
+            minSdkVersion    : 21,
+            targetSdkVersion : 27,
+            versionCode      : 150,
+            versionName      : "2.3.5"
+    ]
+
+    version = [
+            androidSupportSdkVersion: "27.0.2",
+            retrofitSdkVersion      : "2.3.0",
+            dagger2SdkVersion       : "2.14.1",
+            glideSdkVersion         : "4.5.0",
+            fastjsonVersion         : "1.1.67",
+            butterknifeSdkVersion   : "8.8.1",
+            rxlifecycleSdkVersion   : "1.0",
+            rxlifecycle2SdkVersion  : "2.2.1",
+            espressoSdkVersion      : "3.0.1",
+            canarySdkVersion        : "1.5.4",
+            //new start
+            kotlinVersion           : "1.2.10",
+            qumiVersion             : "1.0.4",
+            ankoVersion             : "0.10.4",
+            baseQuickAdapterVersion : "2.9.34",
+            utilsVersion            : "1.9.0",
+            litepalVersion          : "1.6.1",
+            filedownloaderVersion   : "1.6.8",
+            fragmentationVersion    : "1.1.7",
+            converterFastjsonVersion: "2.1.0",
+            okhttpVersion           : "3.9.1",
+            //new end
+            circlePb                : "1.2.1"
+    ]
+
+    dependencies = [
+            //support
+            "appcompat-v7"            : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
+            "design"                  : "com.android.support:design:${version["androidSupportSdkVersion"]}",
+            "support-v4"              : "com.android.support:support-v4:${version["androidSupportSdkVersion"]}",
+            "cardview-v7"             : "com.android.support:cardview-v7:${version["androidSupportSdkVersion"]}",
+            "annotations"             : "com.android.support:support-annotations:${version["androidSupportSdkVersion"]}",
+            "recyclerview-v7"         : "com.android.support:recyclerview-v7:${version["androidSupportSdkVersion"]}",
+
+            //network
+            "retrofit"                : "com.squareup.retrofit2:retrofit:${version["retrofitSdkVersion"]}",
+            "retrofit-converter-gson" : "com.squareup.retrofit2:converter-gson:${version["retrofitSdkVersion"]}",
+            "retrofit-adapter-rxjava2": "com.squareup.retrofit2:adapter-rxjava:${version["retrofitSdkVersion"]}",
+            "okhttp3"                 : "com.squareup.okhttp3:okhttp:${version["okhttpVersion"]}",
+            "okhttp3_ws"              : "com.squareup.okhttp3:okhttp-ws:${version["okhttpVersion"]}",
+            "okhttpLoggingInterceptor": "com.squareup.okhttp3:logging-interceptor:${version["okhttpVersion"]}",
+            "glide"                   : "com.github.bumptech.glide:glide:${version["glideSdkVersion"]}",
+            "glide-compiler"          : "com.github.bumptech.glide:compiler:${version["glideSdkVersion"]}",
+
+            //view
+            "photoview"               : "com.github.chrisbanes.photoview:library:1.2.3",
+
+            //json
+            "fastjson"                : "com.alibaba:fastjson:${version["fastjsonVersion"]}.android",
+
+            //rx2
+            "rxandroid2"              : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            "rxjava2"                 : "io.reactivex.rxjava2:rxjava:2.1.8",
+            "rxlifecycle"             : "com.trello:rxlifecycle-kotlin:${version["rxlifecycleSdkVersion"]}",
+            "rxlifecycle-compones"    : "com.trello:rxlifecycle-components:${version["rxlifecycleSdkVersion"]}",
+
+            //tools
+            "dagger2"                 : "com.google.dagger:dagger:${version["dagger2SdkVersion"]}",
+            "dagger2-compiler"        : "com.google.dagger:dagger-compiler:${version["dagger2SdkVersion"]}",
+            "androideventbus"         : "org.simple:androideventbus:1.0.5.1",
+            "multidex"                : "com.android.support:multidex:1.0.1",
+
+            "logger"                  : "com.orhanobut:logger:2.1.1",
+            //new start
+            "kotlinStd"               : "org.jetbrains.kotlin:kotlin-stdlib:${version["kotlinVersion"]}",
+            "kotlinReflect"           : "org.jetbrains.kotlin:kotlin-reflect:${version["kotlinVersion"]}",
+            "qumi"                    : "com.qmuiteam:qmui:${version["qumiVersion"]}",
+            "baseQuick"               : "com.github.CymChad:BaseRecyclerViewAdapterHelper:${version["baseQuickAdapterVersion"]}",
+            "circlePb"                : "com.github.lzyzsd:circleprogress:${version["circlePb"]}",
+            "utils"                   : "com.blankj:utilcode:${version["utilsVersion"]}",
+            "litepal"                 : "org.litepal.android:core:${version["litepalVersion"]}",
+            "file_download"           : "com.liulishuo.filedownloader:library:${version["filedownloaderVersion"]}",
+            "fragmentation"           : "me.yokeyword:fragmentation:${version["fragmentationVersion"]}",
+            "fragmentation_swipeback" : "me.yokeyword:fragmentation-swipeback:${version["fragmentationVersion"]}",
+            "converter_fastjson"      : "org.ligboy.retrofit2:converter-fastjson-android:${version["converterFastjsonVersion"]}",
+            //anko
+            "anko"                    : "org.jetbrains.anko:anko:${version["ankoVersion"]}",
+            //new end
+    ]
+
+
+}

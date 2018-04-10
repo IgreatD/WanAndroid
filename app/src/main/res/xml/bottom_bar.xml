@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        icon="@drawable/ic_home"
+        id="@+id/tab_home"
+        title="@string/tab_home" />
+    <tab
+        icon="@drawable/ic_dashboard"
+        id="@+id/tab_know"
+        title="@string/tab_know" />
+    <tab
+        icon="@drawable/ic_action_hot"
+        id="@+id/tab_hot"
+        title="@string/hot_title" />
+    <tab
+        icon="@drawable/ic_person"
+        id="@+id/tab_mine"
+        title="@string/tab_me" />
+</tabs>

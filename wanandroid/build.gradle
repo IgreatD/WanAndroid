@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-allopen'
+apply plugin: 'kotlin-noarg'
+apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 27
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        applicationId "com.dinglei.wanandroid"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+MobSDK {
+    appKey "24808b7b64f86"
+    appSecret "c27a224fb408e94d0fad1f6d8c86be95"
+
+    ShareSDK {
+        devInfo {
+            Wechat {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+        }
+    }
+
+}
+
+kapt {
+    generateStubs = true
+}
+
+kotlin { experimental { coroutines 'enable' } }
+
+noArg {
+    annotation("com.sjkj.wanandroid.annotations.Poko")
+}
+
+allOpen {
+    annotation("com.sjkj.wanandroid.annotations.Poko")
+}
+
+dependencies {
+    implementation 'com.android.support:support-annotations:27.0.2'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation project(':app')
+}
+
+repositories {
+    mavenCentral()
+}

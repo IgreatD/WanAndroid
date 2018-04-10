@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/designer_news_dark</color>
+    <color name="colorPrimaryDark">@color/designer_news_link_highlight</color>
+    <color name="colorAccent">@color/designer_news</color>
+    <color name="black_trans">#5c000000</color>
+    <color name="background_light">#fafafa</color> <!-- grey 50 -->
+    <color name="text_secondary_dark">#8a000000</color>
+    <color name="text_tertiary_dark">#61000000</color>
+    <color name="text_primary_dark">#de000000</color>
+    <color name="scrim">#99323232</color>
+
+    <color name="designer_news">#03a9f4</color> <!--light blue 500 -->-->
+    <color name="designer_news_dark">#039be5</color> <!-- light blue 600 -->
+    <color name="designer_news_link_highlight">#b303a9f4</color>
+    <color name="designer_news_story_comment_background">@android:color/transparent</color>
+
+    <color name="background_super_dark">#ff292929</color>
+
+    <color name="designer_news_super_dark">#000133</color>
+    <color name="designer_news_quote_line">#ffeceef1</color>
+    <color name="designer_news_quote">#73000000</color>
+
+    <color name="grey_300">#ffe0e0e0</color>
+
+    <color name="page_indicator_dark">#80333333</color>
+    <color name="page_indicator_dark_selected">#ff333333</color>
+    <color name="ripple_dark">#40808080</color>
+    <color name="background_dark">#ff333333</color>
+    <color name="gif_badge_dark_image">#b3ffffff</color>
+    <array name="loading_placeholders_dark">
+        <item>#ff191919</item>
+        <item>#ff212121</item>
+        <item>#ff232323</item>
+    </array>
+    <array name="loading_placeholders_light">
+        <item>#fff5f5f5</item>
+        <item>#ffeeeeee</item>
+        <item>#ffe0e0e0</item>
+    </array>
+</resources>

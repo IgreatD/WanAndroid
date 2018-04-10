@@ -1,0 +1,32 @@
+apply from: 'config.gradle'
+buildscript {
+    ext.kotlin_version = '1.2.20'
+    repositories {
+        google()
+        jcenter()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven {
+            url "http://mvn.mob.com/android"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-noarg:$kotlin_version"
+        classpath 'com.mob.sdk:MobSDK:+'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

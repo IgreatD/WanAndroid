@@ -1,0 +1,107 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-allopen'
+apply plugin: 'kotlin-noarg'
+apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 27
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+MobSDK {
+    appKey "24808b7b64f86"
+    appSecret "c27a224fb408e94d0fad1f6d8c86be95"
+
+    ShareSDK {
+        devInfo {
+            Wechat {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+        }
+    }
+
+}
+
+kapt {
+    generateStubs = true
+}
+
+kotlin { experimental { coroutines 'enable' } }
+
+noArg {
+    annotation("com.sjkj.wanandroid.annotations.Poko")
+}
+
+allOpen {
+    annotation("com.sjkj.wanandroid.annotations.Poko")
+}
+
+dependencies {
+    implementation 'com.android.support:support-annotations:27.0.2'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    def lib = rootProject.ext.dependencies
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile "com.android.support:palette-v7:27.0.2"
+    compile lib["appcompat-v7"]
+    compile lib["design"]
+    compile lib["support-v4"]
+    compile lib["cardview-v7"]
+    compile lib["recyclerview-v7"]
+    compile lib["retrofit"]
+    compile lib["retrofit-converter-gson"]
+    compile lib["retrofit-adapter-rxjava2"]
+    compile lib["okhttp3"]
+    compile lib["okhttpLoggingInterceptor"]
+    compile lib["glide"]
+    kapt lib["glide-compiler"]
+    compile lib["rxandroid2"]
+    compile lib["rxjava2"]
+    compile lib["dagger2"]
+    kapt lib["dagger2-compiler"]
+    compile lib["androideventbus"]
+    compile lib["multidex"]
+    compile lib["logger"]
+    compile lib["rxlifecycle"]
+    compile lib["rxlifecycle-compones"]
+    compile lib["kotlinStd"]
+    compile lib["kotlinReflect"]
+    compile lib["qumi"]
+    compile lib["baseQuick"]
+    compile lib["utils"]
+    compile lib["litepal"]
+    compile lib["converter_fastjson"]
+    compile lib["anko"]
+    compile lib["fastjson"]
+    compile 'com.roughike:bottom-bar:2.3.1'
+    compile lib["fragmentation"]
+    compile 'com.youth.banner:banner:1.4.10'
+    compile "com.just.agentweb:agentweb:3.0.0"
+    compile 'com.google.android:flexbox:0.3.2'
+    compile "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.20"
+}
+
+repositories {
+    mavenCentral()
+}
